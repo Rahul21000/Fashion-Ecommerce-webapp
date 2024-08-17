@@ -14,17 +14,17 @@ const Cart = () => {
       <CartItem
         key={item.id}
         id={item.id}
-        productTitle={item.title}
-        productImg={item.image}
+        productName={item.name}
+        productIMG={item.imageSrc}
         productPrice={item.price}
         productQuantity={item.quantity}
-        ProductshortDesc={item.alt}
+        ProductshortDesc={item.imageAlt}
       />
     ));
   return (
     <div>
       <h1 className="flex-none text-dark font-bold mx-5">Shopping cart</h1>
-      {totalQuantity?<div className="flex justify-around flex-wrap gap-10 ">
+      {totalQuantity?<div className="flex justify-between flex-wrap gap-10 ">
         <div className=" pointer-events-auto w-screen max-w-md">
           <div className="flex h-full flex-col overflow-y-scroll-hidden bg-white shadow-xl">
             <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
@@ -32,7 +32,7 @@ const Cart = () => {
 
               <div className="mt-8">
                 <div className="flow-root">
-                  <ul role="list" className="my-6 divide-y divide-gray-200">
+                  <ul className="my-6 divide-y divide-gray-200">
                     {cartData}
                   </ul>
                 </div>
@@ -55,7 +55,7 @@ const Cart = () => {
           </div>
           <div className="flex justify-between border-t border-gray-200 p-2">
             <p className="text-sm text-gray-700">Tax estimate</p>
-            <p>{18}</p>
+            <p>18%</p>
           </div>
           <div className="flex justify-between border-t border-gray-200 p-2">
             <p className="text-sm text-gray-700">Total quantity</p>

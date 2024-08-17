@@ -1,8 +1,19 @@
 import { useState } from "react";
 
 const Profile = () => {
-  const [file, setFile] = useState();
+  
+// useEffect(async()=>{
+//   try{
+//     const response=await fetch('api/user/profile')
+//     const result =await response.json();
 
+//   }catch(error){
+//     console.log(error.message);
+//   }
+//  }
+// )
+
+  const [file, setFile] = useState();
   const [inputField, setInputField] = useState({firstname:"",lastname:"",email:"",mobile:"", });
   const [error, setError] = useState({});
   const handleOnChange = (e) => {
@@ -18,7 +29,7 @@ const Profile = () => {
           header:{'Content-Type':'application/json'},
           body:JSON.stringify(inputField)
         })
-        const result =await response.json();
+        // const result =await response.json();
 
       }catch(error){
         console.log(error.message);

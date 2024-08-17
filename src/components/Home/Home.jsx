@@ -1,5 +1,6 @@
 import Hero from "./Hero";
 import ItemList from "./ProductList";
+import Footer from "./Footer";
 const category = [
   { id: 1, title: "Customers also purchased" },
   { id: 2, title: "Most selling product" },
@@ -9,15 +10,16 @@ const category = [
 
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <Hero/>
       <ul>
-        {category.map((cat) => (
-          <li key={cat.id}>
-            <ItemList title={cat.title}  />
+        {category.map((list) => (
+          <li key={list.id}>
+            <ItemList title={list.title}  />
           </li>
         ))}
       </ul>
+      <Footer/>
     </div>
   );
 };

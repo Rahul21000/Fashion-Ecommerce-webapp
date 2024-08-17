@@ -116,7 +116,7 @@ export default function Navbar() {
         <div className='absolute t-20 w-36 rounded-md bg-white z-10'>{suggetionRendor!==null&&suggetionRendor}</div>
         </div>
               <div className=" inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <Link to="cart"
+                <Link to="whislist"
                   className="rounded-full bg-gray-800 p-1 text-gray-400 ">
                   <ShoppingBagIcon className="h-6 w-6 text-white" />
                 </Link>

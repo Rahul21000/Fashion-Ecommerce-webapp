@@ -1,4 +1,34 @@
-[{"id":1,"title":"Throwback Hip Bag","image":"https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg","alt":"Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.","price":599,"inventory":"12"},
-{"id":2,"title":"headphone","image":"https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg","price":800,"inventory":"4"},
-{"id":3,"title":"disney watch","image":"https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg","price":17000,"inventory":"2"},
-{"id":4,"title":"eltronic borad","image":"https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg","price":5000,"inventory":"6"}]
+[
+  {
+    "id": 1,
+    "name": "Earthen Bottle",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
+    "imageAlt": "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+    "price": 499,
+    "inventory": "12"
+  },
+  {
+    "id": 2,
+    "name": "Nomad Tumbler",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
+    "imageAlt": "Olive drab green insulated bottle with flared screw lid and flat top.",
+    "price": 399,
+    "inventory": "12"
+  },
+  {
+    "id": 3,
+    "name": "headphone",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
+    "imageAlt": "headphone with wire and wireless, adjust in head",
+    "price": 800,
+    "inventory": "4"
+  },
+  {
+    "id": 4,
+    "name": "disney watch",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
+    "imageAlt": "watch different type of zip",
+    "price": 17000,
+    "inventory": "2"
+  }
+]

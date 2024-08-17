@@ -1,5 +1,26 @@
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import data from "../../api/productData.json"
+import { useDispatch } from "react-redux";
+import {addToCart} from "../../feature/CartSlice"
+import { useNavigate } from "react-router-dom";
 
-const MoreProductItem = ({ productTitle, productPrice, onAddToCardClicked }) => {
+const MoreProductItem = () => {
+  const[check,setCheck]=useState(false);
+  const dispatch=useDispatch();
+  const navigate=useNavigate()
+  const {itemID}=useParams();
+  const dataItem= data.find((e)=>e.id===parseInt(itemID));
+  const handleonAddToCardBuyClicked=()=>{
+  dispatch(addToCart(dataItem));
+  setTimeout(() => {
+    navigate("/cart")
+    }, 100);
+}
+  const handleOnClick=()=>{
+    // onAddToCardClicked();
+    setCheck(!check)
+  }
     return (
       <div class="bg-white">
       <div class="pt-6">
@@ -49,13 +70,13 @@ const MoreProductItem = ({ productTitle, productPrice, onAddToCardClicked }) => 
         {/* <!-- Product info --> */}
         <div class="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
           <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-            <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{productTitle}</h1>
+            <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">productTitle</h1>
           </div>
     
           {/* <!-- Options --> */}
           <div class="mt-4 lg:row-span-3 lg:mt-0">
             <h2 class="sr-only">Product information</h2>
-            <p class="text-3xl tracking-tight text-gray-900">{productPrice}</p>
+            <p class="text-3xl tracking-tight text-gray-900">productPrice</p>
     
             {/* <!-- Reviews --> */}
             <div class="mt-6">
@@ -212,7 +233,7 @@ const MoreProductItem = ({ productTitle, productPrice, onAddToCardClicked }) => 
                 </fieldset>
               </div>
     
-              <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base bg-black font-medium text-white hover:bg-black-700 focus:outline-none focus:ring-2 focus:ring-black-500 focus:ring-offset-2" onClick={onAddToCardClicked}>Add to bag</button>
+              <button type="button" class={check?"mt-10 flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base bg-green-500 font-medium text-white hover:bg-black-700 focus:outline-none focus:ring-2 focus:ring-black-500 focus:ring-offset-2":"mt-10 flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base bg-black font-medium text-white hover:bg-black-700 focus:outline-none focus:ring-2 focus:ring-black-500 focus:ring-offset-2"} onClick={handleonAddToCardBuyClicked}>{check?"Added":"Add to bag"}</button>
             </form>
           </div>
     
